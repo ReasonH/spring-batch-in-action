@@ -43,7 +43,7 @@ tasklet((contribution, chunkContext))
 - Tasklet은 Step 안에서 단일 수행될 커스텀한 기능들을 선언할때 사용
 - 여기서는 Batch가 수행되면 log 출력되도록 설정
 
-### Job이란?
+### 2-1. Job이란?
 
 ![](image/2-1.png)
 
@@ -51,7 +51,7 @@ tasklet((contribution, chunkContext))
 - Job 안에는 여러 Step이 존재하며 Step 안에 Tasklet 혹은 Reader & Processor & Writer 묶음이 존재
 - Tasklet 하나와 Reader & Processor & Writer 한 묶음이 같은 레벨이므로 Reader & Processor가 끝나고 Tasklet으로 마무리 짓는 등은 불가능하다.
 
-### MySQL 환경에서 Spring Batch 실행
+### 2-2. MySQL 환경에서 Spring Batch 실행
 
 Spring Batch에선 메타 데이터 테이블이 필요하다.
 
@@ -72,7 +72,7 @@ Spring Batch의 메타데이터
 
 이미 Spring Batch에 해당 스키마가 존재하고 있고 이를 그대로 복사해서 `create table`하면 된다.
 
-### MySQL 연동과정
+### 2-3. MySQL 연동과정
 
 1. application profile 설정
 

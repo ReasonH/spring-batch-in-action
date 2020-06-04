@@ -1,6 +1,6 @@
 ## Spring Batch 개요
 
-### What is Batch Application?
+### 1-1. What is Batch Application?
 
 배치는 일괄 처리를 뜻한다. 배치 어플리케이션이란 단발성으로 대용량의 데이터를 처리하는 어플리케이션이다.
 
@@ -14,7 +14,7 @@ Spring MVC가 비지니스 로직에 집중할 수 있게 만들어주듯 Spring
 4. 신뢰성 - 잘못된 것을 추적 (로깅, 알림)
 5. 성능 - 지정된 시간 안에 처리 완료 / 동시 실행되는 다른 어플리케이션을 방해하지 않음
 
-### Spring Batch?
+### 1-2. Spring Batch?
 
 - DI, AOP, 서비스 추상화 등 Spring Framework의 3대 요소를 모두 사용 가능
 
@@ -26,7 +26,7 @@ Spring MVC가 비지니스 로직에 집중할 수 있게 만들어주듯 Spring
 | File | Flat File | 지정 구분자로 파싱 지원 |
 | File | XML | XML 파싱 지원 |
 
-### Batch vs Quartz
+### 1-3. Batch vs Quartz
 
 Quartz는 스케쥴러의 역할을 하며 대용량 배치 처리에 대한 기능을 지원하지 않는다. Batch역시 Quartz의 다양한 스케쥴 기능을 지원하지 않아 보통은 Quartz + Batch를 조합해서 사용한다.
 

@@ -19,3 +19,7 @@ Chapter01. [Spring Batch 개요](study/Chapter01.md)
 Chapter02. [Batch Job 실행해보기](study/Chapter02.md)
 
 Chapter03. [메타테이블](study/Chapter03.md)
+
+Chapter04. [Job Flow](study/Chapter04.md)
+
+Chapter05. [Scope & Job Parameter](study/Chapter05.md)

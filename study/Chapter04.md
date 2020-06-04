@@ -6,7 +6,7 @@ Step은 Job의 구성요소이자 실제 Batch 작업을 수행하는 역할을 
 
 Job 내부의 Step들간에 순서 혹은 처리 흐름을 제어할 필요가 있을 때 이를 관리하는 법을 알아본다.
 
-### Next
+### 4-1. Next
 
 `StepNextJobConfiguration.java`
 
@@ -77,7 +77,7 @@ spirng.batch.job.names에 `NONE`이 할당되는 경우 어떤 배치도 실행�
 
 ![](./image/4-1.png)
 
-### 조건별 흐름 제어
+### 4-2. 조건별 흐름 제어
 
 Next는 순차적으로 Step을 제어한다. 중요한 것은 앞의 step에서 오류 발생 시 다른 step들은 실행되지 못한다는 것이다. 하지만 상황에 따라 정상일 때는 Step B, 오류 발생시 Step C로 수행해야할때가 있다.
 
@@ -218,7 +218,7 @@ public class SkipCheckingListener extends StepExecutionListenerSupport {
 
 StepExecutionListener는 Step이 성공적으로 수행되었는지 확인하며, StepExecution의 skip 횟수가 0보다 클 경우 `**COMPLETED WITH SKIPS의 exitCode를 갖는 ExitStatus를 반환**한다.`
 
-### Decide
+### 4-3. Decide
 
 위에서는 Step의 결과에 따라 서로 다른 Step으로 이동하는 방법을 알아봤다. 여기에는 2가지 문제가 있다.
 

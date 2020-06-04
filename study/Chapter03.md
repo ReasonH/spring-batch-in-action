@@ -4,7 +4,7 @@
 
 ![](image/3-1.png)
 
-### BATCH_JOB_INSTANCE
+### 3-1. BATCH_JOB_INSTANCE
 
 ```sql
 select * from batch_job_instance;
@@ -68,7 +68,7 @@ BATCH_JOB_INSTANCE를 살펴보면 다음과 같이 새로운 Job Instance가 �
 
 즉, 동일한 Job이라도 Job Parameter가 달라지면 그때마다 INSTANCE가 생성되며 동일한 Parameter는 여러개 존재할 수 없다.
 
-### BATCH_JOB_EXECUTION
+### 3-2. BATCH_JOB_EXECUTION
 
 ![](image/3-6.png)
 
@@ -128,7 +128,7 @@ public class SimpleJobConfiguration {
 
 여기에서 눈여겨 보아야 할 점은 INSTANCE FK가 동일하다는 것이다. `requestDate` 파라미터를 변경하지 않고 BATCH_JOB_INSTANCE가 2번 실행되었고 첫번째는 실패, 두번째는 성공했다는 것을 알 수 있다. 동일한 Job Parameter로 2번 실행했는데 같은 파라미터로 실행되었다는 에러가 발생하지 않았다. 다시말해 동일한 Job Parameter로 재수행이 안되는 경우는 **성공한 기록이 있을 때**뿐이다. 
 
-### JOB, JOB_INSTANCE, JOB_EXECUTION
+### 3-3. JOB, JOB_INSTANCE, JOB_EXECUTION
 
 위의 두 테이블과 코드에서 구현한 Spring Batch Job의 관계는 아래와 같다.
 
