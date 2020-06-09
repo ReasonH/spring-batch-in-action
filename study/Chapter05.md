@@ -80,7 +80,7 @@ Spring Batch는 `@StepScope`와 `@JobScope`라는 특별한 Bean Scope를 지원
 
 이렇게 Bean 생성시점을 Step, Job 실행시점으로 지연시켜 얻게되는 장점은 두 가지이다.
 
-#### 1. **JobParameter의 Late Binding**이 가능
+#### 1. JobParameter의 Late Binding이 가능
 
 Job Parameter를 StepContext 또는 JobExecutionContext 레벨에서 할당시킬 수 있다. 꼭 Application이 실행되는 시점이 아니더라도 Controller나 Service 같은 비지니스 로직 처리 단계에서 Job Parameter를 할당시킬 수 있습니다.
 
@@ -96,7 +96,7 @@ Job Parameters는 `@Value`를 통해서 가능하다. 이는 Step, Tasklet, Read
 
 즉, `@StepScope`, `@JobScope` Bean을 생성할때만 Job Parameters가 생성되기 때문에 사용 가능하다.
 
-아래와 같이 메소드를 통해 Bean을 생성하지 않고 클래스에서 직접 Bean 생성을 해본다. Job과 Step의 코드에서 `@Bean`과 **`@Value("#{jobParameters[파라미터명]}")**을 제거하고 `SimpleJobTasklet`을 생성자 DI로 받도록 한다.
+아래와 같이 메소드를 통해 Bean을 생성하지 않고 클래스에서 직접 Bean 생성을 해본다. Job과 Step의 코드에서 `@Bean`과 `@Value("#{jobParameters[파라미터명]}")을 제거하고 `SimpleJobTasklet`을 생성자 DI로 받도록 한다.
 
 `SimpleJobConfiguration` 수정본
 
@@ -174,7 +174,7 @@ public class SimpleJobTasklet implements Tasklet {
 
 반면, 이 SimpleJobTasklet Bean을 일반 singleton Bean으로 생성할 경우
 
-`Property or field 'jobParameters' cannot be found on object of type`이 발생한다. 즉, Bean을 메소드나 클래스 어느것을 통해서 생성해도 무방하나 Bean의 Scope는 Step이나 Job이어야 한다는 것을 알 수 있다. **JobParameters를 사용하기 위해선 꼭 `@StepScope`, `@JobScope`로 Bean을 생성해야한다.**
+`Property or field 'jobParameters' cannot be found on object of type`이 발생한다. 즉, Bean을 메소드나 클래스 어느것을 통해서 생성해도 무방하나 Bean의 Scope는 Step이나 Job이어야 한다는 것을 알 수 있다. **JobParameters를 사용하기 위해선 꼭** `@StepScope`, `@JobScope`**로 Bean을 생성해야한다.**
 
 ### 5-4. JobParameter vs 시스템 변수
 
