@@ -25,3 +25,5 @@ Chapter04. [Job Flow](study/Chapter04.md)
 Chapter05. [Scope & Job Parameter](study/Chapter05.md)
 
 Chapter06. [Chunk 지향 처리](study/Chapter06.md)
+
+Chapter07. [ItemReader](study/Chapter07.md)
