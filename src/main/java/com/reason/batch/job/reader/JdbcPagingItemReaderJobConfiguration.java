@@ -1,6 +1,6 @@
-package com.reason.batch.job;
+package com.reason.batch.job.reader;
 
-import com.reason.batch.domain.Pay;
+import com.reason.batch.entity.Pay;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;

@@ -1,4 +1,4 @@
-package com.reason.batch.domain;
+package com.reason.batch.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

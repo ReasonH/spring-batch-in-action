@@ -1,4 +1,8 @@
 spring:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
   profiles:
     active: local
 spring.batch.job.names: ${job.name:NONE}
