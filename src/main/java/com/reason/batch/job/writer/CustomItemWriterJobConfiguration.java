@@ -1,7 +1,7 @@
 package com.reason.batch.job.writer;
 
-import com.reason.batch.entity.Pay;
-import com.reason.batch.entity.Pay2;
+import com.reason.batch.entity.pay.Pay;
+import com.reason.batch.entity.pay.Pay2;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;

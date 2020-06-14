@@ -1,4 +1,4 @@
-package com.reason.batch.entity;
+package com.reason.batch.entity.pay;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

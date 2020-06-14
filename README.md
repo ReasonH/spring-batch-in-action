@@ -27,3 +27,43 @@ Chapter05. [Scope & Job Parameter](study/Chapter05.md)
 Chapter06. [Chunk 지향 처리](study/Chapter06.md)
 
 Chapter07. [ItemReader](study/Chapter07.md)
+
+Chapter08. [ItemWriter](study/Chapter08.md)
+
+Chapter09. [ItemProcessor](study/Chapter09.md)
+
+### 테이블 세팅 (추가될때마다 업데이트)
+
+~~~sql
+// 예제 테이블 생성
+create table pay (
+  id         bigint not null auto_increment,
+  amount     bigint,
+  tx_name     varchar(255),
+  tx_date_time datetime,
+  primary key (id)
+) engine = InnoDB;
+
+create table pay2 (
+  id         bigint not null auto_increment,
+  amount     bigint,
+  tx_name     varchar(255),
+  tx_date_time datetime,
+  primary key (id)
+) engine = InnoDB;
+
+create table teacher (
+  id        bigint not null auto_increment,
+  name      varchar(255),
+  subject   varchar(255),
+  primary key (id)
+) engine = InnoDB;
+
+create table student (
+  id        bigint not null auto_increment,
+  name      varchar(255),
+  teacher_id    bigint,
+  foreign key (teacher_id) references teacher(id),
+  primary key (id)
+) engine = InnoDB;
+~~~
