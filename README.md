@@ -32,6 +32,8 @@ Chapter08. [ItemWriter](study/Chapter08.md)
 
 Chapter09. [ItemProcessor](study/Chapter09.md)
 
+Chapter10. [테스트](study/Chapter10.md)
+
 ### 테이블 세팅 (추가될때마다 업데이트)
 
 ~~~sql
