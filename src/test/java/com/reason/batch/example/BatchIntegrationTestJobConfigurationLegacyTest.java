@@ -25,7 +25,7 @@ import java.util.List;
 import static com.reason.batch.example.BatchJpaTestConfiguration.FORMATTER;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes={BatchJpaTestConfiguration.class, TestBatchLegacyConfig.class}) // (1)
 public class BatchIntegrationTestJobConfigurationLegacyTest {
 
