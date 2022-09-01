@@ -21,7 +21,7 @@ select * from batch_job_instance;
 
 Chapter2에서 수행한 simpleJob을 확인할 수 있다.
 
-BATCH_JOB_INSTANCE 테이블은 Job Parameter에 따라 생성되는 테이블이다. 여기에서 Job Parameter란 Spring Batch가 실행될 때 외부에서 받을 수 있는 파라미터이다. 특정 날짜를 Job Parameter로 넘기면 Spring Batch에서는 이를 이용해 조회/가공/입력 등 작업을 할 수 있다.
+BATCH_JOB_INSTANCE 테이블은 Job Parameter별 job을 기록하는 테이블이다. 여기에서 Job Parameter란 Spring Batch가 실행될 때 외부에서 받을 수 있는 파라미터이다.
 
 같은 Batch Job이라도 Job Parameter가 다르면 Batch_JOB_INSTANCE 에 기록되며, **Job Parameter가 같다면 기록되지 않는다.**
 

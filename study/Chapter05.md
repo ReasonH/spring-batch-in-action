@@ -92,11 +92,12 @@ Step 안에 Tasklet이 있고 이 Tasklet은 멤버 변수와 멤버 변수를 �
 
 ### 5-3. Job Parameter 오해
 
-Job Parameters는 `@Value`를 통해서 가능하다. 이는 Step, Tasklet, Reader 등 Batch 컴포넌트 Bean의 생성 시점에 호출 가능하지만, 정확히는 Scope Bean을 생성할때만 가능하다.
+Job Parameters는 `@Value`를 통해 접근 가능하다. 이는 Step, Tasklet, Reader 등 Batch 컴포넌트 Bean의 생성 시점에 호출 가능하지만, 정확히는 Scope Bean을 생성할때만 가능하다.
 
-즉, `@StepScope`, `@JobScope` Bean을 생성할때만 Job Parameters가 생성되기 때문에 사용 가능하다.
+**즉, `@StepScope`, `@JobScope` Bean을 생성할때만 Job Parameters가 생성되기 때문에 사용 가능하다.**
 
-아래와 같이 메소드를 통해 Bean을 생성하지 않고 클래스에서 직접 Bean 생성을 해본다. Job과 Step의 코드에서 `@Bean`과 `@Value("#{jobParameters[파라미터명]}")을 제거하고 `SimpleJobTasklet`을 생성자 DI로 받도록 한다.
+예시를 보자. Job과 Step의 코드에서는 `@Bean`과 `@Value("#{jobParameters[파라미터명]}")`을 제거하고 `SimpleJobTasklet`은 생성자 DI로 받도록 한다.
+`SimpleJobTasklet`은 @Bean이 아닌 @Componenet로 생성해본다. jobParameters는 메서드 매개변수가 아닌 필드로 전달받도록 한다.
 
 `SimpleJobConfiguration` 수정본
 
@@ -107,7 +108,7 @@ Job Parameters는 `@Value`를 통해서 가능하다. 이는 Step, Tasklet, Read
 public class SimpleJobConfiguration {
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
-    private final SimpleJobTasklet tasklet1; // 생성자 주입
+    private final SimpleJobTasklet tasklet1;
 
     @Bean
     public Job simpleJob(){

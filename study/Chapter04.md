@@ -174,7 +174,7 @@ ExitStatus.FAILED 없앤 뒤 결과
 
 BatchStatus → **Job 또는 Step 실행의 결과를 Spring에서 기록**할 때 사용하는 Enum이며 COMPLETED, STARTING, STARTED, STOPPING, STOPPED, FAILED, ABANDONED, UNKNOWN 등이 존재
 
-ExitStatus → **Step의 실행 후 상태,** 기본적으로ExitStatus의 exitCode는 Step의 BatchStatus와 동일하다.
+ExitStatus → **Step의 실행 후 상태,** 기본적으로 ExitStatus의 exitCode는 Step의 BatchStatus와 동일하다.
 
 #### 본인의 커스텀 exitCode가 필요하다면?
 
